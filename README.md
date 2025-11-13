@@ -58,8 +58,31 @@ SELECT
     table_name,
     table_rows
 FROM information_schema.tables
-WHERE table_schema = 'gwai_c저 접속하기
-```bash
-http://127.0.0.1:5000
+WHERE table_schema = 'gwai_cymechs';
 ```
 
+#### 3) Python 설치 + 가상 환경 및 라이브러리 셋팅
+##### •  Python 가상환경 생성
+```bash
+python3 -m venv venv
+source venv/bin/activate       # Windows: venv\Scripts\activate
+```
+##### •  필요한 라이브러리 설치 
+```bash
+pip install -r requirements.txt
+```
+
+#### 4) Flask 서버 실행하기
+##### •  가상 환경 활성화
+```bash
+source venv/bin/activate
+```
+##### •  서버 실행하기
+```bash
+python app.py
+```
+
+##### •  Health Monitoring 웹 브라우저 접속하기
+```bash
+http://127.0.0.1:5000 
+```
