@@ -15,20 +15,68 @@
 
 0) 라즈베리파이 초기 준비  
 1) 프로젝트 폴더 구성  
-2) 데이터베이스 구성 (자동 생성)  
+2) 데이터베이스 구성 (setup.sh 자동 실행)  
 3) Python + 가상환경 + 라이브러리 설치  
 4) Flask 서버 실행  
 
-이 모든 과정은 `setup.sh` 실행으로 자동 처리할 수 있습니다.
 
 ---
 
-### ⚡ 빠른 설치 (추천)
+### ⚡Health Monitoring System 사용하기
 
-라즈베리파이에 프로젝트를 복사한 뒤 다음을 실행하세요:
+#### 1) 프로젝트 폴더 구성하기
+##### [프로젝트 파일 다운받기](https://github.com/CymechsBada/CyHealthMonitoring_System)
+'''
+health-monitoring/
+│
+├── app.py                   # Flask 서버 엔트리
+├── setup.sh                 # 자동 설치 스크립트 (DB+Python 환경)
+├── requirements.txt         # Python 패키지 목록
+├── seed.sql (선택)          # 시드 데이터 파일
+└── static/                  # 정적 파일(HTML, JS, CSS)
+    ├── index.html
+    └── assets/
+    
+#### 2) 🗄 데이터베이스 구성 (setup.sh 자동 수행)
+##### 터미널에서 아래 명령어 실행하기 
 
 ```bash
-cd health-monitoring
-dos2unix setup.sh      # (Windows CRLF 방지)
+cd health-monitoring 폴더 주소
+sudo apt install -y dos2unix
+dos2unix setup.sh
 chmod +x setup.sh
 ./setup.sh
+```
+##### DB 정상 셋팅 확인 - 모든 테이블과 각 테이블의 데이터 개수 조회
+```bash
+MYSQL_PWD='hanyangai@' mysql --protocol=TCP -h 127.0.0.1 -u PRM01_HAIC
+USE gwai_cymechs;
+SELECT 
+    table_name,
+    table_rows
+FROM information_schema.tables
+WHERE table_schema = 'gwai_cymechs';
+```
+
+#### 3) Python 설치 + 가상 환경 및 라이브러리 셋팅
+##### Python 가상환경 생성
+```bash
+python3 -m venv venv
+source venv/bin/activate       # Windows: venv\Scripts\activate
+```
+##### 필요한 라이브러리 설치 
+```bash
+pip install -r requirements.txt
+```
+
+#### 4) Flask 서버 실행하
+##### 가상 환경 활성화
+```bash
+source venv/bin/activate
+```
+##### 서버 실행하기
+```bash
+python app.py
+```
+
+
