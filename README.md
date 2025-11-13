@@ -26,7 +26,7 @@
 
 #### 1) 프로젝트 폴더 구성하기
 ##### [프로젝트 파일 다운받기](https://github.com/CymechsBada/CyHealthMonitoring_System)
-'''
+
 ##### 📁 CyHealthMonitoring_System
 
 | 경로 | 설명 |
@@ -39,7 +39,7 @@
 | `static/assets/` | CSS / JS / 이미지 등 정적파일 |
 
 #### 2) 🗄 데이터베이스 구성 (setup.sh 자동 수행)
-##### - 터미널에서 아래 명령어 실행하기 
+##### • 터미널에서 아래 명령어 실행하기 
 
 ```bash
 cd health-monitoring 폴더 주소
@@ -48,7 +48,7 @@ dos2unix setup.sh
 chmod +x setup.sh
 ./setup.sh
 ```
-##### DB 정상 셋팅 확인 - 모든 테이블과 각 테이블의 데이터 개수 조회
+##### • DB 정상 셋팅 확인 (모든 테이블과 각 테이블의 데이터 개수 조회)
 ```bash
 MYSQL_PWD='hanyangai@' mysql --protocol=TCP -h 127.0.0.1 -u PRM01_HAIC
 USE gwai_cymechs;
@@ -60,22 +60,22 @@ WHERE table_schema = 'gwai_cymechs';
 ```
 
 #### 3) Python 설치 + 가상 환경 및 라이브러리 셋팅
-##### **-** Python 가상환경 생성
+##### • Python 가상환경 생성
 ```bash
 python3 -m venv venv
 source venv/bin/activate       # Windows: venv\Scripts\activate
 ```
-##### 필요한 라이브러리 설치 
+##### • 필요한 라이브러리 설치 
 ```bash
 pip install -r requirements.txt
 ```
 
 #### 4) Flask 서버 실행하
-##### 가상 환경 활성화
+##### • 가상 환경 활성화
 ```bash
 source venv/bin/activate
 ```
-##### 서버 실행하기
+##### • 서버 실행하기
 ```bash
 python app.py
 ```
