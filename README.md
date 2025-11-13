@@ -27,7 +27,7 @@
 #### 1) 프로젝트 폴더 구성하기
 ##### [프로젝트 파일 다운받기](https://github.com/CymechsBada/CyHealthMonitoring_System)
 '''
-## 📁 CyHealthMonitoring_System
+##### 📁 CyHealthMonitoring_System
 
 | 경로 | 설명 |
 |------|------|
@@ -60,7 +60,7 @@ WHERE table_schema = 'gwai_cymechs';
 ```
 
 #### 3) Python 설치 + 가상 환경 및 라이브러리 셋팅
-##### - Python 가상환경 생성
+##### * Python 가상환경 생성
 ```bash
 python3 -m venv venv
 source venv/bin/activate       # Windows: venv\Scripts\activate
