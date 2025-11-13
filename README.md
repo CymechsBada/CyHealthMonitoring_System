@@ -23,7 +23,7 @@
 ### ⚡Health Monitoring System 사용하기
 ---
 #### 0) 라즈베리파이 초기 준비 
-#####[라즈베리파이 셋팅하기](https://neighborhoodunclelab.tistory.com/entry/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4Rsapberry-Pi-%EC%85%8B%EC%97%85Set-up%ED%95%98%EA%B8%B0)
+##### [라즈베리파이 셋팅하기](https://neighborhoodunclelab.tistory.com/entry/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC-%ED%8C%8C%EC%9D%B4Rsapberry-Pi-%EC%85%8B%EC%97%85Set-up%ED%95%98%EA%B8%B0)
 
 
 #### 1) 프로젝트 폴더 구성하기
